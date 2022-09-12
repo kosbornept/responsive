@@ -1,0 +1,308 @@
+/* Univeral */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Baloo 2', cursive;
+    color: #fff;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a.disabled-link {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+/* Container */
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #85DCB8;
+    height: auto;
+    align-items: center;
+    text-align: center;
+}
+
+/* Nav*/
+
+#home {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid #E8A87C;
+}
+
+.flex-container h4 {
+    color: #E8A87C;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Hero */
+
+#hero {
+    background-image: url('images/E-commerce-6-razoes-para-comecares-a-investir-1024x576.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#hero h1 {
+    font-size: 5rem;
+    text-align: center;
+    color: #E8A87C;
+}
+
+#hero h3 {
+    font-size: 3rem;
+    text-align: center;
+    color: #E8A87C;
+}
+
+/* Image Gallery */
+
+#image-gallery {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#image-gallery.flex-container {
+    background-color: #41B3A3;
+    padding-bottom: 2rem;
+}
+
+.flex-container article {
+    width: 31%;
+    padding: 1%;
+}
+
+article img {
+    width: 100%;
+    height: 20rem;
+}
+
+article h3 {
+    font-size: 3rem;
+}
+
+article h5 {
+    font-size: 1.25rem;
+}
+
+article p {
+    padding-bottom: 3%;
+    height: 15%;
+}
+
+#image-gallery>* {
+    flex: 0 0 33.3333%;
+    width: 33%;
+}
+
+/* Employees */
+
+#about-us {
+    background-color: #85DCB8;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 1.25rem;
+}
+
+#about-us h2 {
+    margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-size: 4rem;
+}
+
+#employees article h3 {
+    padding: 0;
+}
+
+#employees article h5 {
+    color: #E8A87C;
+    padding: 0;
+}
+
+#employees {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#employees>* {
+    flex: 0 0 33.3333%;
+}
+
+#employees article {
+    padding: 0;
+    margin: 0;
+}
+
+#employees article img {
+    max-width: 30rem;
+    height: 25rem;
+    object-fit: cover;
+    border: .25rem solid #E8A87C;
+    margin-bottom: 7rem;
+}
+
+/* Footer */
+
+#footer {
+    background-color: #C38D9E;
+    font-size: smaller;
+    margin: 0 auto;
+    padding: .5rem 0 0;
+    height: 2rem;
+    justify-items: center;
+    text-align: center;
+}
+
+/* Media */
+
+@media only screen and (max-width: 1440px) {
+    .flex-container article {
+        width: 48%;
+        padding: 1%;
+    }
+
+    article h3 {
+        font-size: 2rem;
+    }
+
+    #hero {
+        background-size: cover;
+        height: 22rem;
+    }
+
+    #hero h1 {
+        margin-bottom: 0;
+    }
+
+    #hero h3 {
+        margin-top: 0;
+    }
+    
+    #image-gallery>* {
+        flex: 0 0 50%;
+        width: 50%;
+    }
+
+    #employees>* {
+        flex: 0 0 50%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    article h3 {
+        font-size: 1.75rem;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .flex-container article {
+        width: 90%;
+        padding: 0 10% 2%;
+    }
+
+    #home {
+        justify-content: space-evenly;
+    }
+
+    #home h4 {
+        margin: 0;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #hero {
+        background-size: 100%;
+        height: 12rem;
+    }
+
+    #hero h1 {
+        font-size: 4.25rem;
+    }
+
+    #hero h3 {
+        display: none;
+    }
+
+    #prodcuts>* {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    #employees>* {
+        flex: 0 0 100%;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+
+    #hero {
+        background-image: none;
+        height: 20rem;
+    }
+
+    #hero h1 {
+        font-size: 4.25rem;
+    }
+
+    #about-us h2 {
+        font-size: 2.5rem;
+    }
+
+    .flex-container article {
+        width: 100%;
+    }
+
+    #image-gallery>* {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+}
